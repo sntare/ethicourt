@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Organization Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="how-to-use.html">How to Use</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="slider-container">
+            <button onclick="navigate(-1)">&#10094;</button>
+            <div class="ethical-questions" id="ethicalQuestions">
+                <div class="question">Question 1</div>
+                <div class="question">Question 2</div>
+                <div class="question">Question 3</div>
+                <!-- More questions can be added here -->
+            </div>
+            <button onclick="navigate(1)">&#10095;</button>
+        </div>
+        <div class="voting-container">
+            <div class="vote" onclick="vote('for')">
+                <span role="img" aria-label="thumbs-up">👍</span>
+                <div class="percentage" id="forPercentage">0%</div>
+            </div>
+            <div class="vote" onclick="vote('neutral')">
+                <span role="img" aria-label="thumbs-sideways">👍</span>
+                <div class="percentage" id="neutralPercentage">0%</div>
+            </div>
+            <div class="vote" onclick="vote('against')">
+                <span role="img" aria-label="thumbs-down">👎</span>
+                <div class="percentage" id="againstPercentage">0%</div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

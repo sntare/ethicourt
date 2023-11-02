@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #bbb 1px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.main {
+    padding: 15px;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.ethical-questions {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.question {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:nth-child(1) {
+    left: 0;
+}
+
+button:nth-child(3) {
+    right: 0;
+}
+
+.voting-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.vote {
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.vote span {
+    font-size: 36px;
+}
+
+.percentage {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
