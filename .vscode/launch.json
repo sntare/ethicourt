@@ -4,13 +4,11 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-     
         {
-            "name": "Launch Edge",
+            "type": "pwa-chrome",
             "request": "launch",
-            "type": "msedge",
-            "url": "http://localhost:59068",
-            "webRoot": "${workspaceFolder}"
+            "name": "Open index.html",
+            "file": "/Users/SteveNtare/Documents/GitHub/ethicourt/index.html"
         }
         
     ]

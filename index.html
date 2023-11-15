@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Organization Name</h1>
+        <h1>ethicourd</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,14 +20,15 @@
     </header>
     <main>
         <div class="slider-container">
-            <button onclick="navigate(-1)">&#10094;</button>
             <div class="ethical-questions" id="ethicalQuestions">
-                <div class="question">Question 1</div>
-                <div class="question">Question 2</div>
-                <div class="question">Question 3</div>
+                <div class="question">Your posted questions go here!</div>
                 <!-- More questions can be added here -->
             </div>
-            <button onclick="navigate(1)">&#10095;</button>
+            <div class="button-div">
+                <button onclick="navigate(-1)">&#10094;</button>
+                <button onclick="navigate(1)">&#10095;</button>
+            </div>
+            
         </div>
         <div class="voting-container">
             <div class="vote" onclick="vote('for')">
@@ -42,6 +43,12 @@
                 <span role="img" aria-label="thumbs-down">👎</span>
                 <div class="percentage" id="againstPercentage">0%</div>
             </div>
+        </div>
+
+        <!-- Add this section for posting questions -->
+        <div class="question-submission">
+            <textarea id="questionInput" placeholder="Type your question here..."></textarea>
+            <button onclick="postQuestion()">Post Question</button>
         </div>
     </main>
     <script src="script.js"></script>

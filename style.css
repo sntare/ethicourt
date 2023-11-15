@@ -61,6 +61,11 @@ header nav {
     box-sizing: border-box;
 }
 
+.button-div {
+    display: flex;
+    flex-direction: row;
+}
+
 button {
     position: absolute;
     top: 50%;
