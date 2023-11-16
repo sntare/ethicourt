@@ -64,4 +64,28 @@ function calculatePercentage(part, total) {
     return ((part / total) * 100).toFixed(1);
 }
 
+async function sendPromptToServer(prompt) {
+    const response = await fetch('http://127.0.0.1:5000/get-response', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt: prompt }),
+    });
+
+    const data = await response.json();
+    return data.response;
+}
+
+document.getElementById('submitPrompt').addEventListener('click', function() {
+    var prompt = document.getElementById('chatgptPrompt').value;
+    sendPromptToServer(prompt)
+        .then(response => {
+            document.getElementById('chatgptResponse').innerText = response;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
+
 // Add other script functionalities as needed
